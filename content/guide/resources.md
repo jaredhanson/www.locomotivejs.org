@@ -109,6 +109,21 @@ as `photosURL()`), that returns an absolute URL, including scheme and host.
 Using these helpers, as opposed to hardcoding paths, makes an application easier
 to maintain as routes change.
 
+##### Only and Except
+
+If you have resources that only implement a subset of the [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+operations, you can limit the routes to just the actions that are supported:
+
+```javascript
+this.resources('bands', { only: [ 'index', 'show', 'edit', 'update' ] });
+```
+
+which is equivalent to:
+
+```javascript
+this.resources('bands', { except: [ 'new', 'create', 'destroy' ] });
+```
+
 #### Singleton Resources
 
 An application may contain singleton resources that are not referenced using an
