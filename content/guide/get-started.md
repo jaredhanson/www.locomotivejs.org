@@ -41,6 +41,8 @@ $ lcm server
 
 Our new app is now up and running at [localhost:3000](http://localhost:3000)!
 
+*Note:* Install supervisor via ```npm install supervisor -g``` if you use ```lcm server -w``` for reloading the server on file changes.
+
 #### Explore the Code
 
 The application skeleton is simplistic, but the code it contains has helpful
