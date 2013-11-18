@@ -31,6 +31,6 @@ urlFor(animal);
 // => http://www.example.com/animals/123
 ```
 
-Out of the box, model awareness works for any model that has a unique contructor.
+Out of the box, model awareness works for any model that has a unique constructor.
 Datastores that don't satisfy this requirement can be made model aware through
 the use of adapters.
