@@ -36,7 +36,7 @@ $ npm install
 #### Start the Server
 
 ```bash
-$ lcm server
+$ node server
 ```
 
 Our new app is now up and running at [localhost:3000](http://localhost:3000)!
