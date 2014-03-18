@@ -103,17 +103,16 @@ For example, the following will route login requests to [Passport](http://passpo
 for authentication.
 
 ```
-this.match('login', passport.authenticate('local', { successRedirect: '/',
-                                                     failureRedirect: '/login' })
-                    { via: 'post' });
+this.match('login',
+    passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }),
+    { via: 'post' });
 ```
 
 Routes can be sent to a middleware chain by specifying each middleware as an
 element within an array.
 
 ```javascript
-this.match('somewhere', [ middlewareOne(),
-                          middlewareTwo() ]);
+this.match('somewhere', [ middlewareOne(), middlewareTwo() ]);
 ```
 
 #### Root Route
