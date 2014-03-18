@@ -70,7 +70,7 @@ reading:
 
 #### Components of Locomotive
 
-The Node.js community has embraced an [aesthetic](http://substack.net/posts/b96642/the-node-js-aesthetic)
+The Node.js community has embraced an [aesthetic](http://substack.net/node_aesthetic)
 characterized by minimalistic modules and radical reusability.  Locomotive
 follows suit, reusing existing modules while layering on only the necessary
 amount higher-level structure.  It does this while preserving flexibility,
