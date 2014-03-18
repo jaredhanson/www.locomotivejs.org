@@ -18,7 +18,7 @@ seamless compatibility with [EJS](https://github.com/visionmedia/ejs),
 
 By default, Locomotive uses [EJS](https://github.com/visionmedia/ejs) as its
 template engine.  That is easily changed by setting the `view engine` option in
-`config/environments/all.js`:
+`config/initializers/02_views.js`:
 
 ```javascript
 this.set('view engine', 'jade');
