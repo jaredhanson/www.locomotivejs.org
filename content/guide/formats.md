@@ -14,9 +14,9 @@ format it prefers to receive in response to a request.
 
 When rendering multiple data formats, it is advisable to use a template engine
 suited to the format.  For example, [Jade](http://jade-lang.com/) is an excellent
-choice for rendering HTML, but is well not suited for rendering XML or JSON.
+choice for rendering HTML, but is not well-suited for rendering XML or JSON.
 
-Template engines for formats are typically configured in `config/environments/all.js`.
+Template engines for formats are typically configured in `config/initializers/02_views.js`.
 For example, the following declares that [xmlb](https://github.com/jaredhanson/xmlb)
 be used when rendering responses in XML format.
 
