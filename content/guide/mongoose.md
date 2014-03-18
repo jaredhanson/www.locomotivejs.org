@@ -14,10 +14,10 @@ database written in C++.
 [locomotive-mongoose](https://github.com/jaredhanson/locomotive-mongoose) is a datastore
 adapter that adds Mongoose model awareness to Locomotive.
 
-To use the Mongoose adapter, install it via [npm](https://npmjs.org/):
+To use the Mongoose adapter, install it via [npm](https://npmjs.org/) and save it in `package.json`:
 
 ```bash
-npm install locomotive-mongoose
+npm install locomotive-mongoose --save
 ```
 
 Register it in `config/environments/all.js`:
