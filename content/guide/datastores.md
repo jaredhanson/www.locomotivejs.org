@@ -6,7 +6,7 @@ layout: 'guide'
 ### Datastores
 
 Locomotive recognizes that the demands of modern web applications entail the
-use of a variety of datastores.  Choosing the correct databse is an important
+use of a variety of datastores.  Choosing the correct database is an important
 decision, and Locomotive does not impose on that choice.  Locomotive is fully
 functional, independent of the choice of database or object mapping layer used
 by an application.
