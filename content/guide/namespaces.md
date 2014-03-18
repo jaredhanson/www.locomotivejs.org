@@ -6,7 +6,7 @@ layout: 'guide'
 ### Routing : Namespaces
 
 Locomotive's router supports namespaces and nesting, which are used to structure
-routes according to a heirarchy.
+routes according to a hierarchy.
 
 #### Namespaces
 
