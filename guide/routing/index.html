@@ -70,7 +70,8 @@ need to hardcode strings.</p>
 <h4 id="match-routes">Match Routes</h4>
 <p>Locomotive can match arbitrary URL patterns to a controller&#39;s action.</p>
 <p>For example, declaring this match route:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'songs/:title'</span>, { controller: <span class="string">'songs'</span>, action: <span class="string">'show'</span> });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'songs/:title'</span>, { <span class="attr">controller</span>: <span class="string">'songs'</span>, <span class="attr">action</span>: <span class="string">'show'</span> });
+</code></pre>
 <p>will cause <code>SongsController</code>&#39;s <code>show()</code> action to handle requests for URLs which
 match the pattern.</p>
 <pre>
@@ -81,19 +82,24 @@ match the pattern.</p>
 <p>Shorthand notation, in the form of <em>controller#action</em> is also available to
 target a controller&#39;s action.  For example, the following route is equivalent to
 the one declared above:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'songs/:title'</span>, <span class="string">'songs#show'</span>);</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'songs/:title'</span>, <span class="string">'songs#show'</span>);
+</code></pre>
 <p>The values associated with named placeholders, in this case <code>:title</code>, will be
 available in the controller via the <code>param()</code> function.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.param(<span class="string">'title'</span>);  <span class="comment">// returns 'like-a-rolling-stone'</span></code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.param(<span class="string">'title'</span>);  <span class="comment">// returns 'like-a-rolling-stone'</span>
+</code></pre>
 <h5 id="via">Via</h5>
 <p>By default, match routes use <code>GET</code> as the HTTP method.  This can be changed by
 specifying the <code>via</code> option:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'photos/upload'</span>, <span class="string">'photos#upload'</span>, { via: <span class="string">'POST'</span> });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'photos/upload'</span>, <span class="string">'photos#upload'</span>, { <span class="attr">via</span>: <span class="string">'POST'</span> });
+</code></pre>
 <p>A route that responds to multiple methods can be specified as an array.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'photos/upload'</span>, <span class="string">'photos#upload'</span>, { via: [<span class="string">'POST'</span>, <span class="string">'PUT'</span>] });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'photos/upload'</span>, <span class="string">'photos#upload'</span>, { <span class="attr">via</span>: [<span class="string">'POST'</span>, <span class="string">'PUT'</span>] });
+</code></pre>
 <h5 id="helper">Helper</h5>
 <p>A routing helper can be declared along with the route with the <code>as</code> option:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'bands/:id'</span>, <span class="string">'bands#show'</span>, { as: <span class="string">'bands'</span> });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'bands/:id'</span>, <span class="string">'bands#show'</span>, { <span class="attr">as</span>: <span class="string">'bands'</span> });
+</code></pre>
 <p>in which case a path routing helper, and corresponding URL routing helper, will
 be available in controllers and views.</p>
 <div class="row">
@@ -121,16 +127,17 @@ be available in controllers and views.</p>
 <a href="http://www.senchalabs.org/connect/">Connect</a>-compatible middleware.</p>
 <p>For example, the following will route login requests to <a href="http://passportjs.org/">Passport</a>
 for authentication.</p>
-<pre><code><span class="transposed_variable">this.</span>match(<span class="string">'login'</span>,
-    <span class="transposed_variable">passport.</span>authenticate(<span class="string">'local'</span>, <span class="cell">{ successRedirect: <span class="string">'/'</span>, failureRedirect: <span class="string">'/login'</span> }</span>),
-    <span class="cell">{ via: <span class="string">'post'</span> }</span>);</code></pre>
-<p>Routes can be sent to a middleware chain by specifying each middleware as an
+<pre><code><span class="keyword">this</span>.match(<span class="string">'login'</span>,
+    passport.authenticate(<span class="string">'local'</span>, { <span class="string">successRedirect:</span> <span class="string">'/'</span>, <span class="string">failureRedirect:</span> <span class="string">'/login'</span> }),
+    { <span class="string">via:</span> <span class="string">'post'</span> });
+</code></pre><p>Routes can be sent to a middleware chain by specifying each middleware as an
 element within an array.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'somewhere'</span>, [ middlewareOne(), middlewareTwo() ]);</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'somewhere'</span>, [ middlewareOne(), middlewareTwo() ]);
+</code></pre>
 <h4 id="root-route">Root Route</h4>
 <p>The root route, <em>/</em>, can be declared with the <code>root()</code> function:</p>
-<pre><code><span class="keyword">this</span>.root(<span class="string">'pages#main'</span>);</code></pre>
-  </div>
+<pre><code><span class="keyword">this</span>.root(<span class="string">'pages#main'</span>);
+</code></pre>  </div>
 </div>
       <div class="footer">
   <p>&copy; 2011-2014 Jared Hanson</p>

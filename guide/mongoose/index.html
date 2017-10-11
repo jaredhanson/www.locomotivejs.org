@@ -67,20 +67,23 @@ database written in C++.</p>
 <p><a href="https://github.com/jaredhanson/locomotive-mongoose">locomotive-mongoose</a> is a datastore
 adapter that adds Mongoose model awareness to Locomotive.</p>
 <p>To use the Mongoose adapter, install it via <a href="https://npmjs.org/">npm</a> and save it in <code>package.json</code>:</p>
-<pre><code class="undefinedbash">npm install locomotive-mongoose --save</code></pre>
+<pre><code class="lang-bash">npm install locomotive-mongoose --save
+</code></pre>
 <p>Register it in <code>config/environments/all.js</code>:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.datastore(require(<span class="string">'locomotive-mongoose'</span>));</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.datastore(<span class="built_in">require</span>(<span class="string">'locomotive-mongoose'</span>));
+</code></pre>
 <h4 id="model-awareness">Model Awareness</h4>
 <p>Mongoose documents can then be passed directly to <code>urlFor()</code>:</p>
-<pre><code class="undefinedjavascript">Animal.findById(<span class="keyword">this</span>.param(<span class="string">'id'</span>), <span class="function"><span class="keyword">function</span><span class="params">(err, animal)</span> {</span>
+<pre><code class="lang-javascript">Animal.findById(<span class="keyword">this</span>.param(<span class="string">'id'</span>), <span class="function"><span class="keyword">function</span>(<span class="params">err, animal</span>) </span>{
   <span class="keyword">if</span> (err) { <span class="keyword">return</span> next(err); }
   self.url = self.urlFor(animal);
   next();
-});</code></pre>
+});
+</code></pre>
 <h4 id="initializer">Initializer</h4>
 <p>The following initializer, located at <code>config/initializers/nn_mongoose.js</code> will
 configure Mongoose and connect to MongoDB when starting a Locomotive application:</p>
-<pre><code class="undefinedjavascript">module.exports = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<pre><code class="lang-javascript"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
   <span class="keyword">switch</span> (<span class="keyword">this</span>.env) {
     <span class="keyword">case</span> <span class="string">'development'</span>:
       mongoose.connect(<span class="string">'mongodb://mongodb.example.com/dev'</span>);
@@ -92,7 +95,8 @@ configure Mongoose and connect to MongoDB when starting a Locomotive application
 
   mongoose.model(<span class="string">'User'</span>, schemas.UserSchema);
   mongoose.model(<span class="string">'Post'</span>, schemas.PostSchema);
-}</code></pre>
+}
+</code></pre>
   </div>
 </div>
       <div class="footer">

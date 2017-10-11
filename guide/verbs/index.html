@@ -62,17 +62,19 @@
     <h3 id="routing-verbs">Routing : Verbs</h3>
 <p>Locomotive&#39;s router supports verb routing in the form of <code>this.VERB()</code>, where
 <em>VERB</em> is one of the HTTP methods, such as <code>this.post()</code>.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.post(<span class="string">'bands'</span>, <span class="string">'bands#create'</span>);</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.post(<span class="string">'bands'</span>, <span class="string">'bands#create'</span>);
+</code></pre>
 <p>Verb routing is syntactic sugar for match routes, meaning the above route is
 equivalent to:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.match(<span class="string">'bands'</span>, <span class="string">'bands#create'</span>, { via: <span class="string">'post'</span> });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.match(<span class="string">'bands'</span>, <span class="string">'bands#create'</span>, { <span class="attr">via</span>: <span class="string">'post'</span> });
+</code></pre>
 <h4 id="middleware">Middleware</h4>
 <p>Middleware and route handling functions can also be passed as arguments to verb
 routes:</p>
-<pre><code><span class="transposed_variable">this.</span>get(<span class="string">'/user/:id'</span>, <span class="transposed_variable">user.</span><span class="built_in">load</span>, <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> {</span>
-  <span class="transposed_variable">res.</span>json(<span class="transposed_variable">req.</span><span class="transposed_variable">locals.</span>user);
-});</code></pre>
-<p>When use in this form, Locomotive&#39;s router supports the <a href="http://expressjs.com/api.html#app.VERB">API</a>
+<pre><code><span class="keyword">this</span>.get(<span class="string">'/user/:id'</span>, user.load, <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> </span>{
+  res.json(req.locals.user);
+});
+</code></pre><p>When use in this form, Locomotive&#39;s router supports the <a href="http://expressjs.com/api.html#app.VERB">API</a>
 exposed by <a href="http://expressjs.com/">Express</a> for routing, making it easy to
 gradually refactor routes from Express to an MVC architecture when needed.</p>
   </div>

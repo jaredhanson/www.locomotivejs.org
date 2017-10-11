@@ -68,14 +68,16 @@ by an application.</p>
 <h4 id="model-awareness">Model Awareness</h4>
 <p>Locomotive includes a <code>urlFor()</code> helper that can be used to build URLs to a
 controller&#39;s action.  For example:</p>
-<pre><code class="undefinedjavascript">urlFor({ controller: <span class="string">'animals'</span>, action: <span class="string">'show'</span>, id: <span class="string">'123'</span> });
-<span class="comment">// =&gt; http://www.example.com/animals/123</span></code></pre>
+<pre><code class="lang-javascript">urlFor({ <span class="attr">controller</span>: <span class="string">'animals'</span>, <span class="attr">action</span>: <span class="string">'show'</span>, <span class="attr">id</span>: <span class="string">'123'</span> });
+<span class="comment">// =&gt; http://www.example.com/animals/123</span>
+</code></pre>
 <p>This helper is also model aware.  It can be passed a model object, which will be
 introspected in order to determine the type of record and build the
 corresponding URL.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">var</span> animal = <span class="keyword">new</span> Animal({ id: <span class="string">'123'</span> });
+<pre><code class="lang-javascript"><span class="keyword">var</span> animal = <span class="keyword">new</span> Animal({ <span class="attr">id</span>: <span class="string">'123'</span> });
 urlFor(animal);
-<span class="comment">// =&gt; http://www.example.com/animals/123</span></code></pre>
+<span class="comment">// =&gt; http://www.example.com/animals/123</span>
+</code></pre>
 <p>Out of the box, model awareness works for any model that has a unique constructor.
 Datastores that don&#39;t satisfy this requirement can be made model aware through
 the use of adapters.</p>

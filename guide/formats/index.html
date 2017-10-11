@@ -71,16 +71,18 @@ choice for rendering HTML, but is not well-suited for rendering XML or JSON.</p>
 <p>Template engines for formats are typically configured in <code>config/initializers/02_views.js</code>.
 For example, the following declares that <a href="https://github.com/jaredhanson/xmlb">xmlb</a>
 be used when rendering responses in XML format.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.format(<span class="string">'xml'</span>, { engine: <span class="string">'xmlb'</span> });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.format(<span class="string">'xml'</span>, { <span class="attr">engine</span>: <span class="string">'xmlb'</span> });
+</code></pre>
 <h4 id="respond">Respond</h4>
 <p>Responding with the requested format is done by calling <code>respond()</code>, which
 takes an object containing format keys as an argument:</p>
-<pre><code class="undefinedjavascript">PostsController.index = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+<pre><code class="lang-javascript">PostsController.index = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
   <span class="keyword">this</span>.respond({
-    <span class="string">'xml'</span>: { template: <span class="string">'feed'</span> },
-    <span class="string">'html'</span>: { template: <span class="string">'index'</span> }
+    <span class="string">'xml'</span>: { <span class="attr">template</span>: <span class="string">'feed'</span> },
+    <span class="string">'html'</span>: { <span class="attr">template</span>: <span class="string">'index'</span> }
   });
-}</code></pre>
+}
+</code></pre>
 <p>The above code will render <code>views/posts/feed.xml.xmlb</code> for any client that
 requests content in XML format, while rendering <code>views/posts/index.html.ejs</code> for
 clients wanting HTML.</p>
@@ -88,18 +90,20 @@ clients wanting HTML.</p>
 associated with the format key.  If default options are sufficient, the format
 key can simply be set to <code>true</code>.  For example, because the template is
 automatically derived from the action, the above could be reduced to:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.respond({
-  <span class="string">'xml'</span>: { template: <span class="string">'feed'</span> },
+<pre><code class="lang-javascript"><span class="keyword">this</span>.respond({
+  <span class="string">'xml'</span>: { <span class="attr">template</span>: <span class="string">'feed'</span> },
   <span class="string">'html'</span>: <span class="literal">true</span>
-});</code></pre>
+});
+</code></pre>
 <h5 id="default-format">Default Format</h5>
 <p>By default, if a client requests a format that is not supported, Locomotive will
 respond with a <code>406 Not Acceptable</code> error.  If instead it is desired to respond
 using a default format, set a <code>default</code> format key.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.respond({
-  <span class="string">'xml'</span>: { template: <span class="string">'feed'</span> },
-  <span class="keyword">default</span>: { format: <span class="string">'html'</span> }
-});</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.respond({
+  <span class="string">'xml'</span>: { <span class="attr">template</span>: <span class="string">'feed'</span> },
+  <span class="attr">default</span>: { <span class="attr">format</span>: <span class="string">'html'</span> }
+});
+</code></pre>
 <p>The above will continue to respond with XML to clients that request it, while
 rendering HTML for all other requests (for HTML or otherwise).</p>
 <h5 id="fine-grained-handling">Fine-Grained Handling</h5>
@@ -107,11 +111,12 @@ rendering HTML for all other requests (for HTML or otherwise).</p>
 format, the format key can be set to a function.  Instead of automatically
 calling <code>render()</code>, the function will be invoked allowing the application to
 handle the request as needed.</p>
-<pre><code class="undefinedjavascript"><span class="keyword">var</span> self = <span class="keyword">this</span>;
+<pre><code class="lang-javascript"><span class="keyword">var</span> self = <span class="keyword">this</span>;
 <span class="keyword">this</span>.respond({
-  <span class="string">'json'</span>: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span> self.res.json({ hello: <span class="string">'world'</span> }); },
-  <span class="keyword">default</span>: <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span> self.render(); }
-})</code></pre>
+  <span class="string">'json'</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{ self.res.json({ <span class="attr">hello</span>: <span class="string">'world'</span> }); },
+  <span class="attr">default</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{ self.render(); }
+})
+</code></pre>
   </div>
 </div>
       <div class="footer">

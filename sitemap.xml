@@ -1,54 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://locomotivejs.org/guide/application/index.html</loc>
+    <loc>http://locomotivejs.org/guide/application/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/architecture/index.html</loc>
+    <loc>http://locomotivejs.org/guide/architecture/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/controllers/index.html</loc>
+    <loc>http://locomotivejs.org/guide/controllers/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/datastores/index.html</loc>
+    <loc>http://locomotivejs.org/guide/datastores/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/directory-structure/index.html</loc>
+    <loc>http://locomotivejs.org/guide/directory-structure/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/filters/index.html</loc>
+    <loc>http://locomotivejs.org/guide/filters/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/formats/index.html</loc>
+    <loc>http://locomotivejs.org/guide/formats/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/get-started/index.html</loc>
+    <loc>http://locomotivejs.org/guide/get-started/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/index.html</loc>
+    <loc>http://locomotivejs.org/guide/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/initialization/index.html</loc>
+    <loc>http://locomotivejs.org/guide/initialization/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/mongoose/index.html</loc>
+    <loc>http://locomotivejs.org/guide/mongoose/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/namespaces/index.html</loc>
+    <loc>http://locomotivejs.org/guide/namespaces/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/resources/index.html</loc>
+    <loc>http://locomotivejs.org/guide/resources/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/routing/index.html</loc>
+    <loc>http://locomotivejs.org/guide/routing/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/verbs/index.html</loc>
+    <loc>http://locomotivejs.org/guide/verbs/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/guide/views/index.html</loc>
+    <loc>http://locomotivejs.org/guide/views/</loc>
+    <lastmod>2017-10-10T00:44:13+00:00</lastmod>
   </url>
   <url>
-    <loc>http://locomotivejs.org/index.html</loc>
+    <loc>http://locomotivejs.org/</loc>
+    <lastmod>2017-10-11T01:43:16+00:00</lastmod>
   </url>
 </urlset>

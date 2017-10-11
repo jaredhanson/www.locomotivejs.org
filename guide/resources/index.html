@@ -65,7 +65,8 @@ HTTP methods to a controller&#39;s actions, according to REST conventions.  Reso
 routing is the preferred routing mechanism in a Locomotive application.</p>
 <h4 id="collection-resources">Collection Resources</h4>
 <p>Declaring this route:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.resources(<span class="string">'photos'</span>);</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.resources(<span class="string">'photos'</span>);
+</code></pre>
 <p>will result in the following routes being mapped to <code>PhotosController</code>:</p>
 <div class="row">
   <div class="span4">
@@ -158,15 +159,18 @@ to maintain as routes change.</p>
 <h5 id="only-and-except">Only and Except</h5>
 <p>If you have resources that only implement a subset of the <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a>
 operations, you can limit the routes to just the actions that are supported:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.resources(<span class="string">'bands'</span>, { only: [ <span class="string">'index'</span>, <span class="string">'show'</span>, <span class="string">'edit'</span>, <span class="string">'update'</span> ] });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.resources(<span class="string">'bands'</span>, { <span class="attr">only</span>: [ <span class="string">'index'</span>, <span class="string">'show'</span>, <span class="string">'edit'</span>, <span class="string">'update'</span> ] });
+</code></pre>
 <p>which is equivalent to:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.resources(<span class="string">'bands'</span>, { except: [ <span class="string">'new'</span>, <span class="string">'create'</span>, <span class="string">'destroy'</span> ] });</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.resources(<span class="string">'bands'</span>, { <span class="attr">except</span>: [ <span class="string">'new'</span>, <span class="string">'create'</span>, <span class="string">'destroy'</span> ] });
+</code></pre>
 <h4 id="singleton-resources">Singleton Resources</h4>
 <p>An application may contain singleton resources that are not referenced using an
 ID.  For example, <code>/account</code> is often used to show account details for the
 logged in user (rather than <code>/account/:id</code>).</p>
 <p>In this case, a singleton resource route can be declared:</p>
-<pre><code class="undefinedjavascript"><span class="keyword">this</span>.resource(<span class="string">'account'</span>);</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">this</span>.resource(<span class="string">'account'</span>);
+</code></pre>
 <p>resulting in the following routes being mapped to <code>AccountController</code>:</p>
 <div class="row">
   <div class="span4">
