@@ -15,16 +15,17 @@
     "email": "jaredhanson@gmail.com",
     "url": "http://www.jaredhanson.net/"
   },
-  "licenses": [ {
-    "type": "CC BY-SA 3.0",
-    "url": "http://creativecommons.org/licenses/by-sa/3.0/"
-  } ],
+  "licenses": [
+    {
+      "type": "CC BY-SA 3.0",
+      "url": "http://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  ],
   "dependencies": {
-    "kerouac": "0.0.x",
-    "kerouac-sitemap": "0.1.x",
-    "kerouac-robotstxt": "0.1.x",
-    "kerouac-htaccess": "0.1.x",
     "ejs-locals": "1.x.x",
-    "express": "3.x.x"
+    "express": "3.x.x",
+    "kerouac": "^0.1.0",
+    "kerouac-robotstxt": "^0.4.0",
+    "kerouac-sitemap": "^0.4.0"
   }
 }

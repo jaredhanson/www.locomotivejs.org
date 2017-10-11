@@ -9,13 +9,14 @@ site.engine('ejs', require('ejs-locals'));
 site.content('content');
 site.static('public');
 
-site.plug(require('kerouac-sitemap')());
-site.plug(require('kerouac-robotstxt')());
+site.page('/sitemap.xml', require('kerouac-sitemap')());
+site.page('/robots.txt', require('kerouac-robotstxt')());
 
 
 /**
  * .htaccess
  */
+/*
 ;(function() {
   var redirect = {
     '/guide/architecture.html': '/guide/architecture/',
@@ -29,7 +30,7 @@ site.plug(require('kerouac-robotstxt')());
   
   site.plug(require('kerouac-htaccess')({ redirect: redirect }));
 })();
-
+*/
 
 site.generate(function(err) {
   if (err) {
