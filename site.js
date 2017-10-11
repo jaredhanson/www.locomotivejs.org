@@ -1,7 +1,7 @@
 var kerouac = require('kerouac');
 var site = kerouac();
 
-site.set('base url', 'http://locomotivejs.org/');
+site.set('base url', 'http://www.locomotivejs.org/');
 site.set('output', 'www');
 
 site.engine('ejs', require('ejs-locals'));
