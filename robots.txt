@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://locomotivejs.org/sitemap.xml
+Sitemap: http://www.locomotivejs.org/sitemap.xml
