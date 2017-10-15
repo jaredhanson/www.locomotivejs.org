@@ -11,6 +11,7 @@ site.static('public');
 
 site.page('/sitemap.xml', require('kerouac-sitemap')());
 site.page('/robots.txt', require('kerouac-robotstxt')());
+site.page('/CNAME', require('kerouac-cname')());
 
 
 /**
